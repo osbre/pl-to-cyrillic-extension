@@ -60,13 +60,19 @@
         return result;
     }
 
-    function replaceTextContent(node) {
+    function replaceContent(node) {
         if (node.nodeType === Node.TEXT_NODE) {
             node.nodeValue = transliterate(node.nodeValue);
-        } else {
-            node.childNodes.forEach(replaceTextContent);
+        } else if (
+            node.nodeType === Node.ELEMENT_NODE &&
+            node.tagName.toLowerCase() !== 'code'
+        ) {
+            for (const child of node.childNodes) {
+                replaceContent(child);
+            }
         }
     }
 
-    replaceTextContent(document.body);
-})();
+    replaceContent(document.body);
+})
+();
