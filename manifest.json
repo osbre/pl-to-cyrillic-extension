@@ -1,0 +1,16 @@
+{
+  "name": "Polish to Cyrillic transliteration tool",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Transliterates Polish text to Cyrillic when the extension icon is clicked.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_title": "Click to transliterate"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
