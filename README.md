@@ -1,4 +1,4 @@
-👀?
+![image info](./illustration.webp)
 
 ## Installation
 
