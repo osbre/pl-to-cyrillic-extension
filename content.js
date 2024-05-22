@@ -68,11 +68,5 @@
         }
     }
 
-    const lang = document.documentElement.lang;
-
-    if (lang === 'pl' || lang.startsWith('pl-')) {
-        replaceTextContent(document.body);
-    } else {
-        alert('This page is not in Polish.');
-    }
+    replaceTextContent(document.body);
 })();
